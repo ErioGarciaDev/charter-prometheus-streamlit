@@ -1,6 +1,13 @@
 FROM python:3.9-slim
 
 WORKDIR /app
+ 
+RUN apt-get update \
+    && apt-get remove --purge -y python3.7
+
+# Install Python
+RUN apt-get install -y python3.6 \
+    && ln -s /usr/bin/python3.6 /usr/bin/python3
 
 RUN apt-get update && apt-get install -y \
     build-essential \
