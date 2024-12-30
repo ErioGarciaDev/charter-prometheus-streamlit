@@ -5,7 +5,6 @@ import awswrangler as wr
 import time
 import datetime
 import pandas as pd
-import plotly.express as px
 import math
 from datetime import datetime
 import warnings
