@@ -1,3 +1,5 @@
 streamlit
 boto3
 awswrangler
+plotly
+cufflinks
