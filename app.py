@@ -31,13 +31,6 @@ s3_client = boto3.client('s3')
 s3_resource = boto3.resource('s3')
 ssm = boto3.client('ssm')
 
-#ssm = boto3.client('ssm',
-#    region_name="us-east-1",
-#    aws_access_key_id="ASIASGLZZQDYAUPLFHL3",
-#    aws_secret_access_key="Qh0jDu1RItuu5kI+oBaqYnYc9thvR+zJ3OVJum9M"
-  #  aws_session_token="IQoJb3JpZ2luX2VjEBQaCXVzLWVhc3QtMSJHMEUCIQCEVg369WVGI3gfoCung74tWRxNbHVviTEu0tj0N8nafAIgbnn34CSbWHU50vl6Dd6R932B4uNtN1lEDdUega5wenMqmgMI3f//////////ARAEGgwxNTExMTYxNTMwNzIiDARLRb8m3bK4jXKSeyruAlAyHjXsMP8j7sktYeyThu/M3yDEE4KzUsforWe/cTuyuRkq4f+kw1OHt3dor+WylY6KPa+rqk1zxx2l9GuWpg/RcPofyEHEdKvOD29yIZ0lPcOamqcG78gkdcZ+aS5b9Ze89fR1qor5p+vSRK5L1H5VH5D+BTySA8HoVDg+sJWkCTLd60MaRDo5UGMXa9oM/5hW3rIqRjhSCa2p3rskEbl8a979/EkIP8ien3nuLwAZ4qmA1w15NbfHBEO/5GjmvF1Jva2vJdwJmVfJfzE/VDw0BZjvILkkIDIo7cWoa2a6MaI0Oc40//EyLMVHWEzlS2ZJGRtRH+VLgNrZSTlzYkYgsjVgtJ4/L9252QUjeUW/A8C4b08hI5YkX3u49tA++mWLSGxFfYV6vJSnBmspcH3345CyZl1WrzpXlcC6C2d7PZ9RY2IvTTjEzapgX92vBmXMPox2irN6suvYDjev1X+QgPO3DvI1ds30o+k7vjCb96a7BjqmAcLm9KmJtGTuXyDtuOLZQvJTlMPm8ntdXOLPKFTQfDPScfthD3Rpz7cA7qGa4xC5RmEROMVAEhbhn5INRAPXCxy63EiCOC65AIigG4r8w935LuUUuunnJtY1CYQZlEH3yteieXY/Qyr2t/bRRv/5UThyMTQRw9upDrgqnWbU1/278TJDKPTuZP4KR2IMkTVEEvMnOdZmElnjp+pGqAcSYWHSwa+NZvM="
-#)
-
 
 ATHENA_DB = ssm.get_parameter(Name='/prometheus/' + ENV +'/athena-db-name', WithDecryption=False)['Parameter']['Value']
 PREFIX_STORAGE = ssm.get_parameter(Name='/prometheus/'+ ENV + '/storage-prefix-name', WithDecryption=False)['Parameter']['Value']
